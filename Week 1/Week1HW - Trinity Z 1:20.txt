@@ -1,0 +1,1 @@
+Write about the difference between GUI and CLI (200 words)
