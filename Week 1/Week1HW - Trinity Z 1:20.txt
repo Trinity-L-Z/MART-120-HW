@@ -1,1 +1,10 @@
-Write about the difference between GUI and CLI (200 words)
+
+	The difference between GUI and CLI is seemingly best contextualized through analysis of the pros and cons. CLI (command-line-interface) comes with a steep learning curve, requiring precise syntactical language, and relies solely on typed commands. The resulting system is one that prioritizes efficiency and simplicity, but only for the well-versed and confident user. On the other hand, GUI (graphical-user-interface) remains more practical and customary when considering a typical person's needs on the computer. Here we rely on pictures, physical gestures, and various displays to navigate--we can even manage multiple things at once. Familiarizing yourself on a new computer with GUI is informal, requiring little to no training; it is visual and interactive, making it a more intuitive and easy to understand interface. This, however, comes with some little-known costs.
+	In less common settings, opting for ease-of-access can prove to be a challenge rather than an asset. For somebody proficient in text-based computer actions, GUI is significantly slower than its alternative. Additionally, with resource consumption in mind, systems designed for CLI require less space and energy. Only a simple monitor, paired with a keyboard, is needed compared to the components required to run a graphical display. GUI is meant to be explored and thrives on discoverability, whereas CLI operates plainly and straight-forward. Overall, there are various advantages to be found dependent on the setting and a user's background.
+
+
+
+
+Websites I utilized:
+https://www.geeksforgeeks.org/difference-between-cli-and-gui/
+https://shardeum.org/blog/gui-vs-cli/
