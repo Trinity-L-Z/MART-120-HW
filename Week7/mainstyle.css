@@ -3,5 +3,8 @@
 
 }
 p{
-    font-family: 'Times New Roman', Times, serif
+    font-family: arial;
+}
+#bigger{
+    font-size: 48px;
 }
