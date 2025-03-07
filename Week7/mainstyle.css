@@ -1,9 +1,5 @@
-.hotpink{
-    color: hotpink
-}
-p{
-    font-family: arial;
-}
-#bigger{
+#title {
     font-size: 48px;
+    font-family: arial;
+    color: hotpink
 }
