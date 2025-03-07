@@ -1,3 +1,7 @@
-span{
-    background-color: hotpink;
+.hotpink{
+    color: hotpink;
+
+}
+p{
+    font-family: 'Times New Roman', Times, serif
 }
