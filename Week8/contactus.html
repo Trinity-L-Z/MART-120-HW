@@ -19,7 +19,8 @@ Please enter your information and select the box below before submitting. By doi
   <table>
     <tr>
       <td>Name</td>
-      <td><input type="text" id="txtName"></td>
+      <required>
+      <td><input type="text" id="txtName"></td> </required>
     </tr>
     <tr>
       <td>Phone Number</td>
@@ -28,6 +29,7 @@ Please enter your information and select the box below before submitting. By doi
     <tr>
         <input type="checkbox" id="terms" name="terms" value="terms">
         <label for="terms"> I have read and agree to the terms of agreement</label><br>  
+    </required>
     </tr>
     <tr>
     <p>
@@ -36,11 +38,6 @@ Please enter your information and select the box below before submitting. By doi
     </tr>
   </table>
     <div id="finalResult"></div> 
-    <form action="/action_page.php">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <input type="submit">
-      </form>
 </body>
 
 </html>
