@@ -1,9 +1,22 @@
 <html>
 <title>contact</title>
 <head>
-    <form>
+    <script>
+        function getData() {
+            var name = document.getElementById("txtName").value;
+            var email = document.getElementById("txtEmail").value;
+            var terms = document.getElementById("txtTerms").value;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type = "text" id="txtName" required /> </td>
+        </tr>
         <input type = "text" class = "txtPost" placeholder = "Post a question?" required />
         <button class = "btnPost btnBlue">Post</button>
-      </form>
-</head>
+    </table>
+</body>      
 </html>
