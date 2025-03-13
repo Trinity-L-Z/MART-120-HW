@@ -2,19 +2,6 @@
 <title>contact</title>
 <head>
     <script>
-        document.getElementById('myForm').addEventListener('Submit', function(event) {
-            event.preventDefault();
-            const Form = document.getElementById('myForm');
-            const Form = Form.value.trim();
-            if (FormValue === "") {
-                Form.focus();
-                Form.style.border = '2px solid red';
-            } else {
-                Form.style.border = '';
-                console.log("Form submitted with data:", FormValue);
-            }    
-        });
-
         function getData() {
             var name = document.getElementById("txtName").value;
             var email = document.getElementById("txtEmail").value;
