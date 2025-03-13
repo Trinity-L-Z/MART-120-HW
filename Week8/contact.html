@@ -7,6 +7,23 @@
             var email = document.getElementById("txtEmail").value;
             var terms = document.getElementById("txtTerms").value;
         }
+        function nameValidation() {
+            if (!name.value) {
+                name.style.border = '5px solid';
+                name.style.borderColor = 'red';
+            }
+        }
+        function emailValidation() {
+            if (!email.value) {
+                email.style.border = '5px solid';
+                email.style.borderColor = 'red';
+            }
+        }
+        submitButton.addEventListener('click', e => {
+            e.preventDefault()
+            nameValidation()
+            emailValidation();
+        });
     </script>
 </head>
 <body>
