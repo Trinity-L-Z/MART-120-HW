@@ -6,11 +6,11 @@
             event.preventDefault();
             const textbox = document.getElementById('myForm');
             const textboxValue = textbox.value.trim();
-            if (textboxValue ==="") {
+            if (textboxValue === "") {
                 textbox.focus();
                 textbox.style.border = '2px solid red';
             } else {
-                textbos.style.border = '';
+                textbox.style.border = '';
                 console.log("Form submitted with data:", textboxValue);
             }    
         });
