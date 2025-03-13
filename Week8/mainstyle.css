@@ -8,3 +8,6 @@
     font-family:arial;
     font-size:24px;
 }
+.error {
+    border-color: red;
+ }
