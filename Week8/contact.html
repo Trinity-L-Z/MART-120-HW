@@ -7,9 +7,7 @@
             var email = document.getElementById("txtEmail").value;
             var terms = document.getElementById("txtTerms").value;
         }
-        document.getElementById("myForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-
+        function validate() {
             var name = document.getElementById("txtName").value;
             var email = document.getElementById("txtEmail").value;
             var terms = document.getElementById("txtTerms").value;
@@ -20,7 +18,7 @@
             } else {
             txtName.classList.remove("error");
             }
-        });
+        };
     </script>
 </head>
 <body>
@@ -40,7 +38,7 @@
             <td><label for="terms"> I had read and agree to the terms of agreement</label><br> </td>
         </tr>
         <tr>
-            <td colspan="3"><button type="submit" id="btnSubmit" onClick="getData();">Submit</button></td>
+            <td colspan="3"><button type="submit" id="btnSubmit" onClick="getData(), validate();">Submit</button></td>
         </tr>
     </table>
     </form>
