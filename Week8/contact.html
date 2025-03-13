@@ -7,6 +7,16 @@
             var email = document.getElementById("txtEmail").value;
             var terms = document.getElementById("txtTerms").value;
         }
+        const form = document.querySelector('form');
+        const input = document.querySelector('form');
+        form.addEventListener('Submit', function(event) {
+            event.preventDefault();
+            if (input.value.trim()===''){
+                alert('Please fill out the input field!');
+            } else {
+                form.submit();
+            }
+        });
     </script>
 </head>
 <body>
