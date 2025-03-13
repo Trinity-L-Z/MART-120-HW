@@ -10,14 +10,15 @@
         document.getElementById("myForm").addEventListener("submit", function(event) {
             event.preventDefault();
 
-            let textbox = document.getElementById("txtName");
-            let textboxValue = textbox.value.trim();
+            var name = document.getElementById("txtName").value;
+            var email = document.getElementById("txtEmail").value;
+            var terms = document.getElementById("txtTerms").value;
 
-            if (textboxValue === "") {
-                textbox.focus();
-                textbox.classList.add("error");
+            if (name.value === "") {
+                name.focus();
+                name.classList.add("error");
             } else {
-            textbox.classList.remove("error");
+            name.classList.remove("error");
             }
         });
     </script>
