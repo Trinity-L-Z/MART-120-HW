@@ -7,7 +7,7 @@
             var email = document.getElementById("txtEmail").value;
             var terms = document.getElementById("txtTerms").value;
         }
-        function validate() {
+        function getData() {
             var input = document.getElementById('txtName').value;
             if(input.value == 0){
                 input.style.border = "1px solid red";
@@ -32,7 +32,7 @@
             <td><label for="terms"> I had read and agree to the terms of agreement</label><br> </td>
         </tr>
         <tr>
-            <td colspan="3"><button id="btnSubmit" onClick="validate();">Submit</button></td>
+            <td colspan="3"><button id="btnSubmit" onClick="getData();">Submit</button></td>
         </tr>
     </table>
     </form>
