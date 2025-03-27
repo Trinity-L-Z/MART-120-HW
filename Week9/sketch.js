@@ -7,5 +7,5 @@ function draw() {
     text('"Burnt Out", by Trinity Zachariasen', 300, 570);
     circle(30, 40, 50);
     square(80, 80, 40);
-    ellipse(300, 400, 400, 500);
+    ellipse(200, 400, 400, 500);
 }
