@@ -20,5 +20,5 @@ function draw() {
     point(300, 100);
     point(400, 100);
     rect(75, 100, 150, 200);
-    text('Small Worlds', 80, 120);
+    text('Small Worlds', 120, 120);
 }
