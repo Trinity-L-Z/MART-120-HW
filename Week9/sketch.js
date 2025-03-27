@@ -7,5 +7,5 @@ function draw() {
     text('"Burnt Out", by Trinity Zachariasen', 300, 570);
     circle(300, 100, 50);
     circle(400, 100, 50);
-    triangle(30, 75, 60, 20, 90, 75);
+    triangle(350, 75, 60, 20, 90, 75);
 }
