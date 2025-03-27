@@ -21,4 +21,5 @@ function draw() {
     point(400, 100);
     rect(75, 100, 150, 200);
     text('Small Worlds', 120, 120);
+    text('by Caleb Azumah Nelson',120, 200);
 }
