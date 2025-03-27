@@ -4,7 +4,7 @@ function setup() {
 
 function draw() {
     background(220);
-    text('"Wonderful!", by Trinity Zachariasen', 300, 570);
+    text('"The book I just finished reading", by Trinity Zachariasen', 300, 570);
     circle(300, 100, 50);
     circle(400, 100, 50);
     triangle(360, 200, 360, 150, 275, 200);
@@ -19,4 +19,5 @@ function draw() {
     triangle(260, 175, 260, 150, 240, 150);
     point(300, 100);
     point(400, 100);
+    rectangle(100, 100, 200, 100);
 }
