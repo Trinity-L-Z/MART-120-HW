@@ -61,9 +61,6 @@ function draw() {
     ellipse(340, y1, 70, 50);
     //this is the chin
     if(y1 >= 330 || y1 <=0)
-    {
-        movement *=1;
-    }
     y1 +=movement;
 
     triangle(440, 175, 440, 150, 480, 150);
