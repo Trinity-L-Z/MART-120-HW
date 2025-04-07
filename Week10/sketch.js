@@ -68,12 +68,12 @@ function draw() {
     }
     y2 -=movement;
     
-    text('Small Worlds', 120, 140);
+    text('Small Worlds', 120, y3);
     if(y3 >= 140 || y3 <= 600)
     {
         movement *=1;
     }
     y3 -=movement;
-    
+
     text('by Caleb Azumah Nelson',85, 200);
 }
