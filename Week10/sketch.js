@@ -21,6 +21,11 @@ function draw() {
     x1 += movement;
 
     circle(x2, 100, 50);
+    if(x2 >= 400 || x2<=0)
+    {
+        movement *=-1;
+    }
+    x2 +=movement;
 
     triangle(360, 200, 360, 150, 275, 200);
     line(260, 275, 400, 275);
