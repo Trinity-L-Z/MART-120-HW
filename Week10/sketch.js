@@ -58,7 +58,7 @@ function draw() {
     point(400, 100);
     rect(75, y2, 150, 200);
     //this is the book
-    if(y2 >= 100 || y1 >=0)
+    if(y2 >= 100 || y1 >=600)
     {
         movement *=1;
     }
