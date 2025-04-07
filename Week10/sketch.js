@@ -53,6 +53,26 @@ function draw() {
     line(260, 275, 400, 275);
     line(x5, y5, x6, y6);
     //this is the line that moves diagonally
+    if(x5 >=400 || x<=600)
+    {
+        movement *=1;
+    }
+    x5 +=movement;
+    if(y5 >=275 || y<=600)
+    {
+        movement *=1;
+    }
+    y5 +=movement;
+    if(x6 >=425 || x6 >=600)
+    {
+        movement *=1;
+    }
+    x6 +=movement;
+    if(y6 >=260 || y6 <=600)
+    {
+        movement *=1;
+    }
+    y6 +=movement;
 
     line(260, 70, 270, 60);
     line(270, 60, 330, 60);
