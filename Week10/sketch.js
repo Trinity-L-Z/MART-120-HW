@@ -7,6 +7,9 @@ var y = 100
 var diameter = 50
 //variable for both eyes
 var y1 = 330
+//variable for chin
+var y2 = 100
+//variable for book
 
 var movement;
 
@@ -54,6 +57,13 @@ function draw() {
     point(300, 100);
     point(400, 100);
     rect(75, 100, 150, 200);
+    //this is the book
+    if(y2 >= 100 || y1 >=600)
+    {
+        movement *=1;
+    }
+    y2 +=movement;
+    
     text('Small Worlds', 120, 140);
     text('by Caleb Azumah Nelson',85, 200);
 }
