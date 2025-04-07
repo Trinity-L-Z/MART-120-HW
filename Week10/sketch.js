@@ -1,7 +1,12 @@
 var x1 = 300
+//variable for left eye
 var x2 = 400
+//variable for right eye
 var y = 100
+//variable for both eyes
 var diameter = 50
+//variable for both eyes
+var y1 = 330
 
 var movement;
 
@@ -14,6 +19,7 @@ function draw() {
     background(220);
     text('"The book I just finished reading", by Trinity Zachariasen', 300, 570);
     circle(x1, y, diameter);
+    //this is the left eyeball
     if(x1 >= 300 || x1 <=0)
     {
         movement *=-1;
@@ -21,6 +27,7 @@ function draw() {
     x1 += movement;
 
     circle(x2, 100, 50);
+    //this is the right eyeball
     if(x2 >= 400 || x2<=0)
     {
         movement *=1;
@@ -34,7 +41,14 @@ function draw() {
     line(270, 60, 330, 60);
     line(360, 60, 420, 60);
     line(420, 60, 440, 70);
-    ellipse(340, 330, 70, 50);
+    ellipse(340, y1, 70, 50);
+    //this is the chin
+    if(y1 >= 330 || y1 <=0)
+    {
+        movement *=1;
+    }
+    y1 +=movement;
+
     triangle(440, 175, 440, 150, 480, 150);
     triangle(260, 175, 260, 150, 240, 150);
     point(300, 100);
