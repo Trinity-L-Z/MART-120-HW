@@ -56,7 +56,7 @@ function draw() {
     triangle(260, 175, 260, 150, 240, 150);
     point(300, 100);
     point(400, 100);
-    rect(75, 100, 150, 200);
+    rect(75, y2, 150, 200);
     //this is the book
     if(y2 >= 100 || y1 >=0)
     {
