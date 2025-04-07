@@ -12,7 +12,7 @@ function draw() {
     circle(x, y, diameter);
     if(x <= 600)
     {
-        x+=13;
+        x+=5;
     }
     circle(400, 100, 50);
     triangle(360, 200, 360, 150, 275, 200);
