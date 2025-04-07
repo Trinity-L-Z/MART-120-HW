@@ -10,7 +10,10 @@ function draw() {
     background(220);
     text('"The book I just finished reading", by Trinity Zachariasen', 300, 570);
     circle(x, y, diameter);
-    x++;
+    if(x <= 600)
+    {
+        x+=13;
+    }
     circle(400, 100, 50);
     triangle(360, 200, 360, 150, 275, 200);
     line(260, 275, 400, 275);
