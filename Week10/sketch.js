@@ -13,13 +13,18 @@ function draw() {
     background(220);
     text('"The book I just finished reading", by Trinity Zachariasen', 300, 570);
     circle(x1, y, diameter);
-    if(x1 >= 300 || x1<=0)
+    if(x1 >= 300 || x1 <=0)
     {
         movement *=-1;
     }
     x1 += movement;
 
     circle(x2, y, diameter);
+    if(x2 >= 400 || x2 <=0)
+    {
+        movement *=-1;
+    }
+    x2 += movement;
 
     triangle(360, 200, 360, 150, 275, 200);
     line(260, 275, 400, 275);
