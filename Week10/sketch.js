@@ -10,6 +10,10 @@ var y1 = 330
 //variable for chin
 var y2 = 100
 //variable for book
+var y3 = 140
+//variable for small worlds txt
+var y4 = 200
+//variable for author txt
 
 var movement;
 
@@ -58,7 +62,7 @@ function draw() {
     point(400, 100);
     rect(75, y2, 150, 200);
     //this is the book
-    if(y2 >= 100 || y1 >=600)
+    if(y2 >= 100 || y1 <=600)
     {
         movement *=1;
     }
