@@ -64,7 +64,7 @@ function draw() {
     {
         movement *=1;
     }
-    y1 +=movement;
+
 
     triangle(440, 175, 440, 150, 480, 150);
     triangle(260, 175, 260, 150, 240, 150);
