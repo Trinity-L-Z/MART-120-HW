@@ -58,11 +58,11 @@ function draw() {
     point(400, 100);
     rect(75, 100, 150, 200);
     //this is the book
-    if(y2 >= 100 || y1 >=600)
+    if(y2 >= 100 || y1 >=0)
     {
         movement *=1;
     }
-    y2 -=movement;
+    y2 +=movement;
     
     text('Small Worlds', 120, 140);
     text('by Caleb Azumah Nelson',85, 200);
