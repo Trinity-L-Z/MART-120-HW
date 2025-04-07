@@ -51,9 +51,9 @@ function draw() {
 
     triangle(360, 200, 360, 150, 275, 200);
     line(260, 275, 400, 275);
-    line(400, 275, 425, 260);
+    line(x5, y5, x6, y6);
     //this is the line that moves diagonally
-    
+
 
     line(260, 70, 270, 60);
     line(270, 60, 330, 60);
