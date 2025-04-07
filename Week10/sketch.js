@@ -62,7 +62,7 @@ function draw() {
     {
         movement *=1;
     }
-    y2 +=movement;
+    y2 -=movement;
     
     text('Small Worlds', 120, 140);
     text('by Caleb Azumah Nelson',85, 200);
