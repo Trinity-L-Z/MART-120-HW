@@ -20,7 +20,7 @@ function draw() {
     x1 += movement;
 
     circle(x2, 100, 50);
-    if(x2 >= 400 || x2 <=0)
+    if(x2 >= 400)
     {
         movement *=-1;
     }
