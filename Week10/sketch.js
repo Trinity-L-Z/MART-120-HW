@@ -60,7 +60,7 @@ function draw() {
     //this is the book
     if(y2 >= 100 || y1 >=600)
     {
-        movement *=1;
+        movement *=-1;
     }
     y2 +=movement;
     
