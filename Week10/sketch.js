@@ -23,7 +23,7 @@ function draw() {
     circle(x2, 100, 50);
     if(x2 >= 400 || x2<=0)
     {
-        movement *=-1;
+        movement *=1;
     }
     x2 +=movement;
 
