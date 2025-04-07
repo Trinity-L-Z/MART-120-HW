@@ -14,14 +14,6 @@ var y3 = 140
 //variable for small worlds txt
 var y4 = 200
 //variable for author txt
-var x5 = 400
-//diagonal line point 1
-var y5 = 275
-//diagonal line point 1
-var x6 = 425
-//diagonal line point 2
-var y6 = 260
-//diagonal line point 2
 
 var movement;
 
@@ -51,29 +43,7 @@ function draw() {
 
     triangle(360, 200, 360, 150, 275, 200);
     line(260, 275, 400, 275);
-    line(x5, y5, x6, y6);
-    //this is the line that moves diagonally
-    if(x5 >=400 || x<=600)
-    {
-        movement *=1;
-    }
-    x5 +=movement;
-    if(y5 >=275 || y<=600)
-    {
-        movement *=1;
-    }
-    y5 +=movement;
-    if(x6 >=425 || x6 >=600)
-    {
-        movement *=1;
-    }
-    x6 +=movement;
-    if(y6 >=260 || y6 <=600)
-    {
-        movement *=1;
-    }
-    y6 +=movement;
-
+    line(400, 275, 425, 260);
     line(260, 70, 270, 60);
     line(270, 60, 330, 60);
     line(360, 60, 420, 60);
