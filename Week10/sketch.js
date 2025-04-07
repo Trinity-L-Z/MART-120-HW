@@ -2,7 +2,7 @@ var x = 300
 var y = 100
 var diameter = 50
 
-var movement = 5;
+var movement = 5
 
 function setup() {
     createCanvas(600, 600);
