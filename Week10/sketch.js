@@ -47,7 +47,7 @@ function draw() {
     line(260, 70, 270, 60);
     line(270, 60, 330, 60);
     line(360, 60, 420, 60);
-    line(520, 60, 440, 70);
+    line(420, 60, 440, 70);
     ellipse(340, y1, 70, 50);
     //this is the chin
     if(y1 >= 330 || y1 <=0)
