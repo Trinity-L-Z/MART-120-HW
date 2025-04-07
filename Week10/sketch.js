@@ -1,3 +1,7 @@
+var x = 300
+var y = 100
+var diameter = 50
+
 function setup() {
     createCanvas(600, 600);
 }
@@ -5,7 +9,7 @@ function setup() {
 function draw() {
     background(220);
     text('"The book I just finished reading", by Trinity Zachariasen', 300, 570);
-    circle(300, 100, 50);
+    circle(x, y, diameter);
     circle(400, 100, 50);
     triangle(360, 200, 360, 150, 275, 200);
     line(260, 275, 400, 275);
