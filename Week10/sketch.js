@@ -16,9 +16,8 @@ function draw() {
     {
         movement *=-1;
     }
-    x += movement
+    x += movement;
 
-    }
     circle(400, 100, 50);
     triangle(360, 200, 360, 150, 275, 200);
     line(260, 275, 400, 275);
