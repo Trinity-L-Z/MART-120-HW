@@ -1,4 +1,5 @@
 var x1 = 300
+var x2 = 400
 var y = 100
 var diameter = 50
 
@@ -18,7 +19,13 @@ function draw() {
     }
     x1 += movement;
 
-    circle(400, 100, 50);
+    circle(x2, y, diameter);
+    if(x2 >=400 || x2<=0)
+    {
+        movement *=-1;
+    }
+    x2 += movement;
+    
     triangle(360, 200, 360, 150, 275, 200);
     line(260, 275, 400, 275);
     line(400, 275, 425, 260);
