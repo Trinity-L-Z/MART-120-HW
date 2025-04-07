@@ -75,5 +75,10 @@ function draw() {
     }
     y3 -=movement;
 
-    text('by Caleb Azumah Nelson',85, 200);
+    text('by Caleb Azumah Nelson',85, y4);
+    if(y4 >=200 || y4 <= 600)
+    {
+        movement *=1;
+    }
+    y4 -=movement;
 }
