@@ -64,21 +64,21 @@ function draw() {
     //this is the book
     if(y2 >= 100 || y1 <=600)
     {
-        movement *=2;
+        movement *=1;
     }
     y2 -=movement;
     
     text('Small Worlds', 120, y3);
     if(y3 >= 140 || y3 <= 600)
     {
-        movement *=2;
+        movement *=1;
     }
     y3 -=movement;
 
     text('by Caleb Azumah Nelson',85, y4);
     if(y4 >=200 || y4 <= 600)
     {
-        movement *=2;
+        movement *=1;
     }
     y4 -=movement;
 }
