@@ -1,4 +1,4 @@
-var x = 300
+var x1 = 300
 var y = 100
 var diameter = 50
 
@@ -11,12 +11,12 @@ function setup() {
 function draw() {
     background(220);
     text('"The book I just finished reading", by Trinity Zachariasen', 300, 570);
-    circle(x, y, diameter);
-    if(x >= 300 || x<=0)
+    circle(x1, y, diameter);
+    if(x1 >= 300 || x1<=0)
     {
         movement *=-1;
     }
-    x += movement;
+    x1 += movement;
 
     circle(400, 100, 50);
     triangle(360, 200, 360, 150, 275, 200);
