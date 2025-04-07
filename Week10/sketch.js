@@ -7,6 +7,7 @@ var movement = 5
 
 function setup() {
     createCanvas(600, 600);
+    movement = floor(random() * 10) + 1;
 }
 
 function draw() {
