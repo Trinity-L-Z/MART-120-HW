@@ -12,7 +12,7 @@ function draw() {
     background(220);
     text('"The book I just finished reading", by Trinity Zachariasen', 300, 570);
     circle(x, y, diameter);
-    if(x >= 600 || x<=0)
+    if(x >= 300 || x<=0)
     {
         movement *=-1;
     }
