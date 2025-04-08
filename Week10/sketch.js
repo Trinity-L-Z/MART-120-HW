@@ -1,23 +1,19 @@
-var x1 = 300;
+var x1 = 300
 //variable for left eye
-var x2 = 400;
+var x2 = 400
 //variable for right eye
-var y = 100;
+var y = 100
 //variable for both eyes
-var diameter = 50;
+var diameter = 50
 //variable for both eyes
-var y1 = 330;
+var y1 = 330
 //variable for chin
-var y2 = 100;
+var y2 = 100
 //variable for book
-var y3 = 140;
+var y3 = 140
 //variable for small worlds txt
-var y4 = 200;
+var y4 = 200
 //variable for author txt
-
-var size = 11;
-var count = 0;
-var sizeDirection = 2;
 
 var movement;
 
@@ -27,17 +23,8 @@ function setup() {
 }
 
 function draw() {
-{
     background(220);
-    textSize(size);
-    size+= sizeDirection;
-    count++;
-    if(count >5)
-    {
-        sizeDirection *=-1;
-        count = 0;
-    }
-}
+    textSize(11);
     text('"The book I just finished reading", by Trinity Zachariasen', 300, 570);
     circle(x1, y, diameter);
     //this is the left eyeball
