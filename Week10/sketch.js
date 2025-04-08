@@ -28,6 +28,7 @@ function setup() {
 
 function draw() {
     background(220);
+    fill(120);
     textSize(11);
     size+= sizeDirection;
     count++;
