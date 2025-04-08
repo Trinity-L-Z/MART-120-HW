@@ -15,6 +15,10 @@ var y3 = 140
 var y4 = 200
 //variable for author txt
 
+var size = 11;
+var count = 0;
+var sizeDirection = 2;
+
 var movement;
 
 function setup() {
