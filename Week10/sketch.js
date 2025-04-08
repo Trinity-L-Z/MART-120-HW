@@ -14,7 +14,8 @@ var y3 = 140
 //variable for small worlds txt
 var y4 = 200
 //variable for author txt
-
+var x5 = 11
+var txtsize
 var movement;
 
 function setup() {
@@ -24,7 +25,13 @@ function setup() {
 
 function draw() {
     background(220);
-    textSize(11);
+    textSize(x5);
+    if(x5 >=11 || x5 <=6)
+    {
+        txtsize *=-1;
+    }
+    x5 += txtsize;
+    
     text('"The book I just finished reading", by Trinity Zachariasen', 300, 570);
     circle(x1, y, diameter);
     //this is the left eyeball
