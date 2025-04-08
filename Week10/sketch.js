@@ -53,7 +53,7 @@ function draw() {
     //this is the chin
     if(y1 >= 330 || y1 <=0)
     {
-        movement *=-1;
+        movement *=1;
     }
     y1 +=movement;
 
