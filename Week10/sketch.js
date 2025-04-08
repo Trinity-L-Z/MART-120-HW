@@ -24,7 +24,7 @@ function setup() {
 
 function draw() {
     background(220);
-    textSize(15);
+    textSize(13);
     text('"The book I just finished reading", by Trinity Zachariasen', 300, 570);
     circle(x1, y, diameter);
     //this is the left eyeball
