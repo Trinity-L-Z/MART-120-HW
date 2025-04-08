@@ -28,7 +28,7 @@ function setup() {
 
 function draw() {
     background(220);
-    textSize(11);
+    textSize(size);
     size+= sizeDirection;
     count++;
     if(count > 5)
