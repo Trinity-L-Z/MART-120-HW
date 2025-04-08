@@ -36,7 +36,7 @@ function draw() {
         sizeDirection *=-1;
         count = 0;
     }
-    text('"The book I just finished reading", by Trinity Zachariasen', 200, 570);
+    text('"The book I just finished reading", by Trinity Zachariasen', 100, 570);
     circle(x1, y, diameter);
     //this is the left eyeball
     if(x1 >= 300 || x1 <=0)
