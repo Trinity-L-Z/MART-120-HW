@@ -9,11 +9,11 @@ function draw() {
     background (120);
     //this impacts the color (red, green, blue)
     fill(10, 145, 200);
-    if(keyIsDown(RIGHT_ARROW));
+    if(keyIsDown(68));
     {
         x+=5;
     }
-    if(keyIsDown(LEFT_ARROW));
+    if(keyIsDown(65));
     {
         x-=5;
     }
