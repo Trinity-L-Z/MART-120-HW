@@ -17,11 +17,11 @@ function draw() {
     {
         x-=5;
     }
-    if(keyIsDown(UP_ARROW) === true)
+    if(keyIsDown(DOWN_ARROW) === true)
     {
         y+=5;
     }
-    if(keyIsDown(DOWN_ARROW) === true)
+    if(keyIsDown(UP_ARROW) === true)
     {
         y-=5;
     }
