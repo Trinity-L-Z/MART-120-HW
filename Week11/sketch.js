@@ -7,7 +7,16 @@ function setup() {
 
 function draw() {
     background (120);
+    //this impacts the color (red, green, blue)
     fill(10, 145, 200);
+    if(keyIsDown(RIGHT_ARROW));
+    {
+        x+=5;
+    }
+    if(keyIsDown(LEFT_ARROW));
+    {
+        x-=5;
+    }
     ellipse (x,y,50,50);
     
     if (x >= 600) {
