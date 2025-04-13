@@ -17,6 +17,14 @@ function draw() {
     {
         x-=5;
     }
+    if(keyIsDown(UP_ARROW) === true)
+    {
+        y+=5;
+    }
+    if(keyIsDown(DOWN_ARROW) === true)
+    {
+        y-=5;
+    }
     ellipse (x,y,50,50);
     
     if (x >= 600) {
