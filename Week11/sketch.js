@@ -51,7 +51,7 @@ function draw() {
 
     //my two obstacles
     fill(25,150,100);
-    square(400,200,75);
+    square(400,200,55);
 
     fill(130,100,170);
     square(100,450,100);
