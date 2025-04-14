@@ -13,7 +13,7 @@ function draw() {
     createBorders(10);
     //the exit text
     textSize(20);
-    text("exit here", width-50, height-50)
+    text("exit here", width-100, height-100)
 
     if(keyIsDown(RIGHT_ARROW) === true)
     {
