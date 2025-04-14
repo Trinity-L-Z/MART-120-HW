@@ -66,6 +66,9 @@ function draw() {
     shapeXSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
     shapeYSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
 
+    shapeX += shapeXSpeed;
+    shapeY += shapeYSpeed;
+
     if(shapeX > width) {
         shapeX = 0;
     }
