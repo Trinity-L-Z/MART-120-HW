@@ -8,7 +8,7 @@ var shapeY = 50;
 var shapeXSpeed;
 var shapeYSpeed;
 
-//for the shapes that appear by clicking the mouse
+//for the shapes that appears by clicking the mouse
 var mouseShapeX;
 var mouseShapeY;
 
@@ -57,7 +57,7 @@ function draw() {
     square(100,450,100);
 
     //winner message
-    if(x > width && y > width) {
+    if(x > 600 && y > width) {
         textSize(30);
         text("You're a winner!", width-300, height-200);
     }
