@@ -26,22 +26,19 @@ function draw() {
     textSize(20);
     text("exit here", width-100, height-50)
 
-    if(keyIsDown(RIGHT_ARROW) === true)
-    {
-        x+=5;
-    }
-    if(keyIsDown(LEFT_ARROW) === true)
-    {
-        x-=5;
-    }
-    if(keyIsDown(DOWN_ARROW) === true)
-    {
-        y+=5;
-    }
-    if(keyIsDown(UP_ARROW) === true)
-    {
-        y-=5;
-    }
+    if (keyIsDown(LEFT_ARROW) === true) {
+        x-= 5;
+   } 
+   else if (keyIsDown(RIGHT_ARROW) === true) {
+       x += 5;
+   }
+   else if (keyIsDown(UP_ARROW) === true) {
+       y -= 5;
+   }
+   else if (keyIsDown(DOWN_ARROW) === true) {
+       y += 5;
+   }
+ 
     ellipse (x,y,50,50);
     
     if (x >= 600) {
