@@ -64,7 +64,7 @@ function draw() {
         fill (0);
         stroke(5);
         textSize(30);
-        text("You're a winner!", width/2-50, height/2-50);
+        text("You're a winner!", width-300, height-200);
     }
 }
 
