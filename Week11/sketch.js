@@ -58,8 +58,6 @@ function draw() {
 
     //winner message
     if(x > width && y > width) {
-        fill (0);
-        stroke(5);
         textSize(30);
         text("You're a winner!", width-300, height-200);
     }
