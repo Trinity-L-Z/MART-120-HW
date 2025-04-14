@@ -1,6 +1,14 @@
+//for my movable character
 var x = 200;
 var y = 200;
 
+//for the moving shape
+var shapeX = 30;
+var shapeY = 50;
+var shapeXSpeed;
+var shapeYSpeed;
+
+//for the shapes that appear by clicking the mouse
 var mouseShapeX;
 var mouseShapeY;
 
@@ -50,6 +58,26 @@ function draw() {
 
     fill(130,100,170);
     square(100,450,100);
+
+    //the moving shape
+    fill(13,145,14);
+    ellispe(shapeX, shapeY, 10, 10);
+
+    shapeXSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
+    shapeYSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
+
+    if(shapeX > width) {
+        shapeX = 0;
+    }
+    if(shapeX < 0) {
+        shapeX = width;
+    }
+    if(shapeY > height) {
+        shapeY = 0;
+    }
+    if(shapeY < 0) {
+        shapeY = height;
+    }
 
 }
 
