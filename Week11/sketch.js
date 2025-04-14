@@ -58,7 +58,7 @@ function draw() {
 
     // the moving shape
     fill(0, 100, 400);
-    circle(shapeX, shapeY, 10);
+    circle(shapeX, shapeY, 40);
     
     shapeXSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
     shapeYSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
