@@ -59,6 +59,13 @@ function draw() {
     fill(130,100,170);
     square(100,450,100);
 
+    //winner message
+    if(x > width && Y > width-50) {
+        fill (0);
+        stroke(5);
+        textSize(30);
+        text("You're a winner!", width/2-50, height/2-50);
+    }
 }
 
 function createBorders(thickness) {
