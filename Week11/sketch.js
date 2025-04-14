@@ -9,6 +9,12 @@ function draw() {
     background (120);
     //this impacts the color (red, green, blue)
     fill(10, 145, 200);
+    //to create the border
+    createBorders(10);
+    //the exit text
+    textSize(20);
+    text("exit here", width-50, height-50)
+
     if(keyIsDown(RIGHT_ARROW) === true)
     {
         x+=5;
@@ -30,5 +36,12 @@ function draw() {
     if (x >= 600) {
         x = 0;
     }
+}
+
+function createBorders(thickness) {
+    rect(0,0,width,thickness);
+    rect(0,0,thickness,height);
+    rect(0,height-thickness,width,thickness);
+    rect(width-thickness,0,thickness,height-50);
 }
 
