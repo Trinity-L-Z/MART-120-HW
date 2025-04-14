@@ -1,6 +1,9 @@
 var x = 200;
 var y = 200;
 
+var mouseShapeX;
+var mouseShapeY;
+
 function setup() {
     createCanvas(600, 600);
 }
@@ -36,6 +39,10 @@ function draw() {
     if (x >= 600) {
         x = 0;
     }
+
+    //to create shape with mouse
+    fill(120,130,140);
+    ellipse(mouseShapeX, mouseShapeY, 25, 25);
 }
 
 function createBorders(thickness) {
@@ -45,3 +52,7 @@ function createBorders(thickness) {
     rect(width-thickness,0,thickness,height-50);
 }
 
+function mouseClicked() {
+    mouseShapeX = mouseX;
+    mouseShapeY = mouseY;
+}
