@@ -9,8 +9,6 @@ function draw() {
     background (120);
     //this impacts the color (red, green, blue)
     fill(10, 145, 200);
-    //to create the border
-    createBorders(10);
     if(keyIsDown(RIGHT_ARROW) === true)
     {
         x+=5;
