@@ -41,7 +41,7 @@ function draw() {
     }
 
     //to create shape with mouse
-    fill(120,130,140);
+    fill(200, 0, 15);
     ellipse(mouseShapeX, mouseShapeY, 25, 25);
 }
 
