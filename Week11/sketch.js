@@ -49,7 +49,7 @@ function draw() {
     square(400,200,75);
 
     fill(30,70,10);
-    square(100,500,100);
+    square(100,450,100);
 
 }
 
