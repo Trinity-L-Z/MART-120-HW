@@ -45,7 +45,9 @@ function draw() {
     ellipse(mouseShapeX, mouseShapeY, 25, 25);
 
     //my two obstacles
-    triangle(30,70,58,20,86,75);
+    fill(25,150,100);
+    square(400,200,75);
+
 }
 
 function createBorders(thickness) {
