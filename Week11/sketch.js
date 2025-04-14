@@ -7,8 +7,6 @@ function setup() {
 
 function draw() {
     background (120);
-    //for the border
-    createBorders(15);
     //this impacts the color (red, green, blue)
     fill(10, 145, 200);
     if(keyIsDown(RIGHT_ARROW) === true)
