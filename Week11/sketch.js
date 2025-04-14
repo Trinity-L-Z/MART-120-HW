@@ -48,6 +48,9 @@ function draw() {
     fill(25,150,100);
     square(400,200,75);
 
+    fill(30,70,10);
+    square(100,500,100);
+
 }
 
 function createBorders(thickness) {
