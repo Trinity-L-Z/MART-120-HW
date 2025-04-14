@@ -7,6 +7,11 @@ function setup() {
 
 function draw() {
     background (120);
+    //for the border
+    createBorders(15);
+    //exit gap
+    textSize(20);
+    text("exit here", width-50,height-50)
     //this impacts the color (red, green, blue)
     fill(10, 145, 200);
     if(keyIsDown(RIGHT_ARROW) === true)
@@ -31,3 +36,4 @@ function draw() {
         x = 0;
     }
 }
+
