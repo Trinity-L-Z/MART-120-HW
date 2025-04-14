@@ -59,7 +59,7 @@ function draw() {
     //winner message
     if(x > 600 && y > width) {
         textSize(30);
-        text("You're a winner!", width-300, height-200);
+        text("You're a winner!", 100, 100);
     }
 }
 
