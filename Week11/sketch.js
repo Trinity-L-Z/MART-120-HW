@@ -60,7 +60,7 @@ function draw() {
     square(100,450,100);
 
     //winner message
-    if(x > width && y > width-50) {
+    if(x > width && y > width) {
         fill (0);
         stroke(5);
         textSize(30);
