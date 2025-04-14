@@ -56,33 +56,27 @@ function draw() {
     fill(130,100,170);
     square(100,450,100);
 
-    // potential enemy
-    fill(13,145,14);
-    // draw the shape
+    // the moving shape
+    fill(0, 100, 400);
     circle(shapeX, shapeY, 10);
+    
+    shapeXSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
+    shapeYSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
 
-     // get a random speed when the it first starts
-     shapeXSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
-     shapeYSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
-
-    // move the shape
+    // for making it move
     shapeX += shapeXSpeed;
     shapeY += shapeYSpeed;
-    // check to see if the shape has gone out of bounds
-    if(shapeX > width)
-    {
+    // making the shape return
+    if(shapeX > width) {
         shapeX = 0;
     }
-    if(shapeX < 0)
-    {
+    if(shapeX < 0) {
         shapeX = width;
     }
-    if(shapeY > height)
-    {
+    if(shapeY > height) {
         shapeY = 0;
     }
-    if(shapeY < 0)
-    {
+    if(shapeY < 0) {
         shapeY = height;
     }
 
