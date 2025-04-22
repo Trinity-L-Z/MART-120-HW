@@ -101,10 +101,6 @@ function draw() {
     placeobjects();
     movingball();
     createcharacter(x,y);
- 
-   
-
-   
    
 }
 
@@ -125,12 +121,11 @@ function createBorders(thickness) {
     rect(width-thickness,0,thickness,height-50);
 }
 
-//not really sure why this isn't showing up
 function youwin() {
     if(x > width && y > width-50) {
         fill(0);
         textSize(26);
-        text("You Win!", width-50, height-50);
+        text("You Win!", width-25, height-50);
     }
 }
 
