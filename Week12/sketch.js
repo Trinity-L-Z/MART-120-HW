@@ -50,7 +50,7 @@ function draw() {
     text("exit here", width-100, height-50)
     //character keyboard movement function being called
     movecharacter();
-    //calling the message for you win function
+    //calling the function for you win message
     youwin();
 
  
@@ -105,11 +105,11 @@ function createBorders(thickness) {
 }
 
 function youwin() {
-    if(x = 590) {
+    if(characterX > width && characterY > width-50) {
         fill(0);
         stroke(5);
         textSize(26);
-        text("You Win!", width-50, height-50);
+        text("You Win!", width/2-50, height/2-50);
     }
 }
 
