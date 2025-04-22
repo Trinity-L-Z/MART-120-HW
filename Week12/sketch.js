@@ -125,7 +125,7 @@ function youwin() {
     if(x > width && y > width-50) {
         fill(0);
         textSize(26);
-        text("You Win!", width-100, height-200);
+        text("You Win!", width-10, height-200);
     }
 }
 
