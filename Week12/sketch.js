@@ -39,14 +39,6 @@ function createcharacter(x,y) {
     console.log(characterX);
 }
 
-//function for making the borders
-function createBorders(thickness) {
-    rect(0,0,width,thickness);
-    rect(0,0,thickness,height);
-    rect(0,height-thickness,width,thickness);
-    rect(width-thickness,0,thickness,height-50);
-
-
 function draw() {
     background (120);
     //this impacts the color (red, green, blue)
@@ -109,7 +101,11 @@ function draw() {
     }
 }
 
-
+function createBorders(thickness) {
+    rect(0,0,width,thickness);
+    rect(0,0,thickness,height);
+    rect(0,height-thickness,width,thickness);
+    rect(width-thickness,0,thickness,height-50);
 }
 
 function mouseClicked() {
