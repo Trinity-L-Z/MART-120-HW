@@ -32,6 +32,18 @@ function movecharacter() {
    }
 }
 
+//function for creating my character
+function createcharacter(x,y) {
+    characterX = x;
+    characterY = y;
+    console.log(characterX);
+
+    ellipse (x,y,50,50);
+
+}
+
+
+
 function draw() {
     background (120);
     //this impacts the color (red, green, blue)
@@ -44,9 +56,6 @@ function draw() {
     //character keyboard movement function being called
     movecharacter();
 
- 
-    ellipse (x,y,50,50);
-    
     if (x >= 600) {
         x = 0;
     }
