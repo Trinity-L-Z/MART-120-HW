@@ -107,7 +107,7 @@ function youwin() {
         fill(0);
         stroke(5);
         textSize(26);
-        text("You Win!", width/2-50, height/2-50);
+        text("You Win!", width-50, height-50);
     }
 }
 
