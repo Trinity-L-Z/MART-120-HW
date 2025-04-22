@@ -92,20 +92,22 @@ function draw() {
     if(shapeY < 0) {
         shapeY = height;
     }
-
-    //winner message
-    if(x > width && y > width-50) {
-        textSize(30);
-        fill(0);
-        text("You're a winner!", width/2-50, height/2-50);
-    }
 }
 
+//function for making the borders
 function createBorders(thickness) {
     rect(0,0,width,thickness);
     rect(0,0,thickness,height);
     rect(0,height-thickness,width,thickness);
     rect(width-thickness,0,thickness,height-50);
+}
+
+function youwin() {
+    if(characterX > width && characterY > width-50) {
+        fill(0);
+        stroke(5);
+        textSize(26);
+        text("You Win!", width/2-50, height/2-50);
 }
 
 function mouseClicked() {
