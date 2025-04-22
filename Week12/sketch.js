@@ -100,7 +100,7 @@ function draw() {
     exithere();
     placeobjects();
     movingball();
-    createcharacter();
+    createcharacter(x,y);
  
    
 
