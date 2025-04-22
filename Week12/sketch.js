@@ -51,31 +51,9 @@ function exithere() {
     text("exit here", width-100, height-50);
 }
 
-//where all of the functions are finally called and actually made to happen, also where the canvas is drawn
-function draw() {
-    background (120);
-    //this impacts the color (red, green, blue)
-    fill(10, 145, 200);
-    //to create the border
-    createBorders(10);
-    //character keyboard movement function being called
-    movecharacter();
-    //calling the function for you win message
-    youwin();
-    //calling function to create shape with mouse
-    placeshapewithmouse();
-    //exit here function being called
-    exithere();
-    placeobjects();
- 
-    ellipse (x,y,50,50);
-    
-    if (x >= 600) {
-        x = 0;
-    }
-
-
-    // the moving shape
+//making background shape more
+function movingball() {
+ // the moving shape
     fill(0, 300, 400);
     circle(shapeX, shapeY, 15);
     
@@ -100,6 +78,33 @@ function draw() {
     }
 }
 
+//where all of the functions are finally called and actually made to happen, also where the canvas is drawn
+function draw() {
+    background (120);
+    //this impacts the color (red, green, blue)
+    fill(10, 145, 200);
+    //to create the border
+    createBorders(10);
+    //character keyboard movement function being called
+    movecharacter();
+    //calling the function for you win message
+    youwin();
+    //calling function to create shape with mouse
+    placeshapewithmouse();
+    //exit here function being called
+    exithere();
+    placeobjects();
+ 
+    ellipse (x,y,50,50);
+    
+    if (x >= 600) {
+        x = 0;
+    }
+
+
+   
+}
+
 //function for the two objects
 function placeobjects() {
     fill(25,150,100);
@@ -117,6 +122,7 @@ function createBorders(thickness) {
     rect(width-thickness,0,thickness,height-50);
 }
 
+//not really sure why this isn't showing up
 function youwin() {
     if(x > width && y > width-50) {
         fill(0);
