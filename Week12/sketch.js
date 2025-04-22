@@ -54,8 +54,6 @@ function draw() {
  
     ellipse (x,y,50,50);
     
-    if (x >= 600) {
-        x = 0;
     }
 
     //to create shape with mouse
