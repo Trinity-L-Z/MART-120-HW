@@ -51,6 +51,7 @@ function exithere() {
     text("exit here", width-100, height-50);
 }
 
+//where all of the functions are finally called and actually made to happen, also where the canvas is drawn
 function draw() {
     background (120);
     //this impacts the color (red, green, blue)
