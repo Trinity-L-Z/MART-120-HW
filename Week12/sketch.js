@@ -65,6 +65,7 @@ function draw() {
     placeshapewithmouse();
     //exit here function being called
     exithere();
+    placeobjects();
  
     ellipse (x,y,50,50);
     
@@ -72,12 +73,6 @@ function draw() {
         x = 0;
     }
 
-    //my two obstacles
-    fill(25,150,100);
-    square(400,200,55);
-
-    fill(130,100,170);
-    square(100,450,100);
 
     // the moving shape
     fill(0, 300, 400);
@@ -102,6 +97,15 @@ function draw() {
     if(shapeY < 0) {
         shapeY = height;
     }
+}
+
+//function for the two objects
+function placeobjects() {
+    fill(25,150,100);
+    square(400,200,55);
+
+    fill(130,100,170);
+    square(100,450,100);
 }
 
 //function for making the borders
