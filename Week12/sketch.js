@@ -93,6 +93,7 @@ function draw() {
     //exit here function being called
     exithere();
     placeobjects();
+    movingball();
  
     ellipse (x,y,50,50);
     
