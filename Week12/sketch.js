@@ -50,6 +50,8 @@ function draw() {
     text("exit here", width-100, height-50)
     //character keyboard movement function being called
     movecharacter();
+    //calling the message for you win function
+    youwin();
 
  
     ellipse (x,y,50,50);
