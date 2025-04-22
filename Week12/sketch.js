@@ -53,8 +53,6 @@ function draw() {
 
  
     ellipse (x,y,50,50);
-    
-    }
 
     //to create shape with mouse
     fill(100, 0, 25);
