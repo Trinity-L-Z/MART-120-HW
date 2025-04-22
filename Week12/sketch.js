@@ -39,6 +39,12 @@ function createcharacter(x,y) {
     console.log(characterX);
 }
 
+//function for drawing object with mouse
+function placeshapewithmouse() {
+    fill(100, 0, 25);
+    ellipse(mouseShapeX, mouseShapeY, 25, 25);
+}
+
 function draw() {
     background (120);
     //this impacts the color (red, green, blue)
@@ -52,17 +58,14 @@ function draw() {
     movecharacter();
     //calling the function for you win message
     youwin();
-
+    //calling function to create shape with mouse
+    placeshapewithmouse()
  
     ellipse (x,y,50,50);
     
     if (x >= 600) {
         x = 0;
     }
-
-    //to create shape with mouse
-    fill(100, 0, 25);
-    ellipse(mouseShapeX, mouseShapeY, 25, 25);
 
     //my two obstacles
     fill(25,150,100);
