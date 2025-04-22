@@ -105,7 +105,7 @@ function createBorders(thickness) {
 }
 
 function youwin() {
-    if(characterX > width && characterY > width-50) {
+    if(x > width && y > width-50) {
         fill(0);
         stroke(5);
         textSize(26);
