@@ -45,15 +45,18 @@ function placeshapewithmouse() {
     ellipse(mouseShapeX, mouseShapeY, 25, 25);
 }
 
+//function for making the exit
+function exithere() {
+    textSize(20);
+    text("exit here", width-100, height-50);
+}
+
 function draw() {
     background (120);
     //this impacts the color (red, green, blue)
     fill(10, 145, 200);
     //to create the border
     createBorders(10);
-    //the exit text
-    textSize(20);
-    text("exit here", width-100, height-50)
     //character keyboard movement function being called
     movecharacter();
     //calling the function for you win message
