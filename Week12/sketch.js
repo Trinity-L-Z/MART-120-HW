@@ -16,17 +16,9 @@ function setup() {
     createCanvas(600, 600);
 }
 
-function draw() {
-    background (120);
-    //this impacts the color (red, green, blue)
-    fill(10, 145, 200);
-    //to create the border
-    createBorders(10);
-    //the exit text
-    textSize(20);
-    text("exit here", width-100, height-50)
-
-    if (keyIsDown(LEFT_ARROW) === true) {
+//function for moving my character
+function movecharacter() {
+        if (keyIsDown(LEFT_ARROW) === true) {
         x-= 5;
    } 
    else if (keyIsDown(RIGHT_ARROW) === true) {
@@ -38,6 +30,20 @@ function draw() {
    else if (keyIsDown(DOWN_ARROW) === true) {
        y += 5;
    }
+}
+
+function draw() {
+    background (120);
+    //this impacts the color (red, green, blue)
+    fill(10, 145, 200);
+    //to create the border
+    createBorders(10);
+    //the exit text
+    textSize(20);
+    text("exit here", width-100, height-50)
+    //character keyboard movement function being called
+    movecharacter();
+
  
     ellipse (x,y,50,50);
     
