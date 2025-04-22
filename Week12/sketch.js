@@ -62,7 +62,9 @@ function draw() {
     //calling the function for you win message
     youwin();
     //calling function to create shape with mouse
-    placeshapewithmouse()
+    placeshapewithmouse();
+    //exit here function being called
+    exithere();
  
     ellipse (x,y,50,50);
     
