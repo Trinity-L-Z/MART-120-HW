@@ -53,6 +53,10 @@ function draw() {
 
  
     ellipse (x,y,50,50);
+    
+    if (x >= 600) {
+        x = 0;
+    }
 
     //to create shape with mouse
     fill(100, 0, 25);
@@ -99,7 +103,7 @@ function createBorders(thickness) {
 }
 
 function youwin() {
-    if(characterX > width && characterY > width-50) {
+    if(x > width && y > width-50) {
         fill(0);
         stroke(5);
         textSize(26);
