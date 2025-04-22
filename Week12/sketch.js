@@ -38,8 +38,7 @@ function createcharacter(x,y) {
     characterY = y;
     console.log(characterX);
 
-    ellipse (x,y,50,50);
-
+    
 }
 
 
@@ -56,6 +55,9 @@ function draw() {
     //character keyboard movement function being called
     movecharacter();
 
+ 
+    ellipse (x,y,50,50);
+    
     if (x >= 600) {
         x = 0;
     }
