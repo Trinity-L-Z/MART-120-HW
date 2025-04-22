@@ -54,8 +54,7 @@ function exithere() {
 //making background shape more
 function movingball() {
  // the moving shape
-    fill(0, 300, 400);
-    circle(shapeX, shapeY, 15);
+
     
     shapeXSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
     shapeYSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
@@ -101,7 +100,8 @@ function draw() {
         x = 0;
     }
 
-
+    fill(0, 300, 400);
+    circle(shapeX, shapeY, 15);
    
 }
 
