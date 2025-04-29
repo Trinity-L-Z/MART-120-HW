@@ -1,3 +1,3 @@
 # MART-120-HW
 
-This is my repository for my creative coding class
+This is the folder for my Creative Coding final project
