@@ -30,7 +30,7 @@ function draw() {
     
     for (let i=0; i<spectrum.length; i++) {
         let y = map(spectrum[i], 0, 255, 0, height);
-        line(i, 0, i, y); 
+        line(i, height, i, height - y); 
     }
 
     //for loop - time domain
