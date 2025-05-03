@@ -27,7 +27,6 @@ function setup() {
                 let distance = dist(x, y, z, 0, 0, 0);
 
                 distFromCenter.push({x, y, z, distance});
-                print(distFromCenter);
             }
         }
     }
