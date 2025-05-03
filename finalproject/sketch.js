@@ -8,6 +8,10 @@ function draw() {
     background(220);
     orbitControl();
     
+    push();
+    translate(-num/2 * size, 0, 0);
+    noFill();
+
     //x direction
     for (let i=0; i<num; i++) {
         //y direction
@@ -21,4 +25,6 @@ function draw() {
             }
         }
     }
+    pop();
+
 }
