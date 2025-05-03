@@ -3,7 +3,7 @@ let fft; smoothing = 0.8; let bins = 512;
 let waveform = [];
 
 function preload() {
-    song = loadSound("machine.wav")
+    song = loadSound("machine.mp3")
 }
 
 function setup() {
