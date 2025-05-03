@@ -9,7 +9,7 @@ function draw() {
     orbitControl();
     
     push();
-    translate(-num/2 * size, 0, 0);
+    translate(size/2 -num/2 * size, 0, 0);
     noFill();
 
     //x direction
