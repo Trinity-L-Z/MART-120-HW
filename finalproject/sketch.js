@@ -1,4 +1,4 @@
-let size = 50; let num = 3
+let size = 15; let num = 10
 
 function setup() {
     createCanvas(400, 400, WEBGL);
@@ -21,7 +21,7 @@ function draw() {
             for (let k=0; k<num; k++) {
                 push();
                 translate(i*size, j*size, k*size);
-                box(50);
+                box(size - size/4);
                 pop();    
             }
         }
