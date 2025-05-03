@@ -9,8 +9,20 @@ function preload() {
     song = loadSound("machine.mp3");
 }
 
+function soundLoaded() {
+    console.log("Sound loaded!");
+}
+
+function mousePressed() {
+    if (mySound.isLoaded()) {
+        userStartAudio();
+        mySound.play();
+    }
+}
+
 function setup() {
     createCanvas(400, 400, WEBGL);
+    mySound = loadSound('machine.mp3', soundLoaded);
     fft = new p5.FFT();
 
     for (let i=0; i<num; i++) {
