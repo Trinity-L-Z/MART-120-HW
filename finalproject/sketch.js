@@ -26,4 +26,10 @@ function draw() {
     background(220);
     waveform = fft.waveform();
     print(waveform);
+
+    //for loop
+    for (let i=0; i<waveform.length; i++) {
+        let y = height/2 + waveform[i];
+        ellipse(i, y, 1, 1);
+    }
 }
