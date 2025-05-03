@@ -9,9 +9,11 @@ function draw() {
     orbitControl();
     
     for (let i=0; i<num; i++) {
+        for (let j=0; j<num; j++) {
         push();
-        translate(i*size, 0);
+        translate(i*size, j*size);
         box(50);
-        pop();
+        pop();    
+        }
     }
 }
