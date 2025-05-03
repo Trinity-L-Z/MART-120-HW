@@ -28,6 +28,13 @@ function draw() {
     waveform = fft.waveform();
     spectrum = fft.analyze();
     let vol = fft.getEnergy(20, 140);
+
+    //change color at certain frequency
+    if (vol > 250) {
+        stroke(255, 0, 0);
+    } else {
+        stroke(0);
+    }
     
     for (let i=0; i<spectrum.length; i++) {
         let y = map(spectrum[i], 0, 255, 0, height);
