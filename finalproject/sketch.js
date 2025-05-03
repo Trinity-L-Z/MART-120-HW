@@ -1,6 +1,7 @@
 let song;
 let fft; smoothing = 0.8; let bins = 512;
 let waveform = []; let r = 100
+let spectrum = [];
 
 //this is to make the audio play in the browser
 const audio = new Audio("machine.mp3");
@@ -25,11 +26,16 @@ function setup() {
 function draw() {
     background(220);
     waveform = fft.waveform();
-    print(waveform);
-
-    //for loop
-    for (let i=0; i<waveform.length; i++) {
-        let y = height/2 + map(waveform[i], -1, 1, -r, r);
-        ellipse(i, y, 1, 1);
+    spectrum = fft.analyze();
+    
+    for (let i=0; i<spectrum.length; i++) {
+        let y = map(spectrum[i], 0, 255, 0, height);
+        line(i, 0, i, y); 
     }
+
+    //for loop - time domain
+    //for (let i=0; i<waveform.length; i++) {
+      //  let y = height/2 + map(waveform[i], -1, 1, -r, r);
+        //ellipse(i, y, 1, 1);
+    //}
 }
