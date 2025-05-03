@@ -8,12 +8,17 @@ function draw() {
     background(220);
     orbitControl();
     
+    //x direction
     for (let i=0; i<num; i++) {
+        //y direction
         for (let j=0; j<num; j++) {
-        push();
-        translate(i*size, j*size);
-        box(50);
-        pop();    
+            //z direction
+            for (let k=0; k<num; k++) {
+                push();
+                translate(i*size, j*size, k*size);
+                box(50);
+                pop();    
+            }
         }
     }
 }
