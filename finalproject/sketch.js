@@ -1,6 +1,8 @@
 let size = 15; let num = 10
 let grid = [];
 
+let button;
+
 let song; let fft;
 let spectrum = [];
 let distFromCenter = [];
@@ -13,9 +15,15 @@ function soundLoaded() {
     console.log("Sound loaded!");
 }
 
-function playMusic() {
-    var music = new Audio('machine.mp3');
-    music.play();
+function togglePlaying() {
+    if (!song.isPlaying()) {
+        song.play();
+        song.setVolume(0.3);
+        button.html("pause");
+    } else {
+        song.pause();
+        button.html("play");
+    }
 }
 
 function setup() {
