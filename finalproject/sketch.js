@@ -27,6 +27,7 @@ function draw() {
     background(220);
     waveform = fft.waveform();
     spectrum = fft.analyze();
+    let vol = fft.getEnergy(20, 140);
     
     for (let i=0; i<spectrum.length; i++) {
         let y = map(spectrum[i], 0, 255, 0, height);
