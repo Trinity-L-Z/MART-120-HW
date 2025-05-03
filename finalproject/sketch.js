@@ -8,8 +8,9 @@ function draw() {
     background(220);
     orbitControl();
     
+    let offset = size/2 -num/2 * size
     push();
-    translate(size/2 -num/2 * size, 0, 0);
+    translate(offset, offset, 0);
     noFill();
 
     //x direction
