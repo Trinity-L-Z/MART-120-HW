@@ -10,7 +10,6 @@ function draw() {
     
     //for position in the center
     let offset = size/2 -num/2 * size
-    push();
     translate(offset, offset, offset);
     noFill();
 
@@ -27,6 +26,4 @@ function draw() {
             }
         }
     }
-    pop();
-
 }
