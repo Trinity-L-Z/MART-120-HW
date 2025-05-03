@@ -1,5 +1,5 @@
 let size = 15; let num = 10
-let grid = [];
+let grid = []; let min = 150;
 
 let button;
 
@@ -62,10 +62,17 @@ function draw() {
     orbitControl();
 
     spectrum = fft.analyze();
+    let vol = fft.getEnergy(20, 140);
+    if (vol > 240) {
+        stroke(255, 255, 0, 20); //yellow, smaller transparency
+    } else {
+        stroke (0, 20); //black, same transparency
+    }
+
     let totalCubes = num*num*num;
     for (let i=0; i<totalCubes; i++) {
         let pos = distFromCenter[i]; //position
-        let c = spectrum[i]; //color
+        let c = map(spectrum[i], 0, 255, min, 255); //color
         grid[pos.i][pos.j][pos.k] = c;
     }
     
@@ -80,7 +87,12 @@ function draw() {
         for (let j=0; j<num; j++) {
             //z direction
             for (let k=0; k<num; k++) {
-                fill(grid[i][j][k]); //color
+                if (grid[i][j][k] > min) {
+                fill(grid[i][j][k], 0, 200); //color  
+                } else {
+                    noFill();
+                }
+
 
                 push();
                 translate(i*size, j*size, k*size);
