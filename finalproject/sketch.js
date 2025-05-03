@@ -3,7 +3,7 @@ let grid = [];
 
 let song; let fft;
 let spectrum = [];
-let distFromCenter = []:
+let distFromCenter = [];
 
 function preload() {
     song = loadSound("machine.mp3");
