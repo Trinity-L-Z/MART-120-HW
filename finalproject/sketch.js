@@ -8,9 +8,10 @@ function draw() {
     background(220);
     orbitControl();
     
+    //for position in the center
     let offset = size/2 -num/2 * size
     push();
-    translate(offset, offset, 0);
+    translate(offset, offset, offset);
     noFill();
 
     //x direction
