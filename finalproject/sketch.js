@@ -1,6 +1,6 @@
 let song;
 let fft; smoothing = 0.8; let bins = 512;
-let waveform = [];
+let waveform = []; let r = 100
 
 //this is the make the audio play in the browser
 const audio = new Audio("machine.mp3");
@@ -29,7 +29,7 @@ function draw() {
 
     //for loop
     for (let i=0; i<waveform.length; i++) {
-        let y = height/2 + waveform[i];
+        let y = height/2 + map(waveform[i], -1, 1, -r, r);
         ellipse(i, y, 1, 1);
     }
 }
