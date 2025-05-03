@@ -45,10 +45,16 @@ function setup() {
                 let z = k*size + offset;
                 let distance = dist(x, y, z, 0, 0, 0);
 
-                distFromCenter.push({x, y, z, distance});
+                distFromCenter.push({i, j, k, distance});
             }
         }
     }
+    distFromCenter.sort(compareDistances);
+}
+
+//function for telling how to sort the values
+function compareDistances(a, b) {
+    return a.distance - b.distance;
 }
 
 function draw() {
@@ -56,6 +62,12 @@ function draw() {
     orbitControl();
 
     spectrum = fft.analyze();
+    let totalCubes = num*num*num;
+    for (let i=0; i<totalCubes; i++) {
+        let pos = distFromCenter[i]; //position
+        let c = spectrum[i]; //color
+        grid[pos.i][pos.j][pos.k] = c;
+    }
     
     //for positioning in the center
     let offset = size/2 -num/2 * size
@@ -68,11 +80,7 @@ function draw() {
         for (let j=0; j<num; j++) {
             //z direction
             for (let k=0; k<num; k++) {
-                if (grid[i][j][k] == 1) {
-                    fill(255, 0, 0); //red
-                } else {
-                    fill (255); //white
-                }
+                fill(grid[i][j][k]); //color
 
                 push();
                 translate(i*size, j*size, k*size);
