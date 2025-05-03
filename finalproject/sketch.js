@@ -13,9 +13,11 @@ function soundLoaded() {
     console.log("Sound loaded!");
 }
 
-function playMusic() {
-    var music = new Audio('machine.mp3');
-    music.play();
+function mousePressed() {
+    if (mySound.isLoaded()) {
+        userStartAudio();
+        mySound.play();
+    }
 }
 
 function setup() {
