@@ -2,7 +2,7 @@ let song;
 let fft; smoothing = 0.8; let bins = 512;
 let waveform = []; let r = 100
 
-//this is the make the audio play in the browser
+//this is to make the audio play in the browser
 const audio = new Audio("machine.mp3");
 audio.addEventListener('canplaythrough', function() {
     audio.play();
@@ -17,7 +17,7 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(400, 400);
+    createCanvas(bins, bins);
     song.play();
     fft = new p5.FFT(smoothing, bins);
 }
