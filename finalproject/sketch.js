@@ -77,7 +77,7 @@ class Particle {
 
         this.w = random(3, 5);
 
-        this.color = [random(200, 255), random(200, 255), random(200, 255)]; //random colors
+        this.color = [random(200, 255), random(200, 255), random(200, 255),]; //random colors
     }
     update(cond) {
         this.vel.add(this.acc);
@@ -89,7 +89,7 @@ class Particle {
         }
     }
     edges() { //to make particles go away after leaving canvas
-        if (this.pos.x <-width / 2 ||this.pos.x > width / 2 || this.pos.y < -height || this.pos.y > height) {
+        if (this.pos.x < -width / 2 ||this.pos.x > width / 2 || this.pos.y < -height || this.pos.y > height) {
                 return true
             } else {
                 return false
