@@ -1,5 +1,6 @@
 var song
 var fft
+var particles = []
 
 
 function preload() {
@@ -38,6 +39,12 @@ function draw() {
         }
         endShape()
         }
+    var p = new Particle()
+    particles.push(p)
+
+    for (var i = 0; i < particles.length; i++) {
+        particles[i].show()
+    }
 
 }
 
@@ -50,5 +57,16 @@ function togglePlaying() {
         song.pause();
         button.html("play");
         noLoop();
+    }
+}
+
+class Particle {
+    constructor() {
+        this.pos = p5.Vector.random2D().mult(250)
+    }
+    show() {
+        noStroke()
+        fill(255)
+        ellipse(this.pos.x, this.pos.y, 4)
     }
 }
