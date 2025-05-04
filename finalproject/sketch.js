@@ -1,6 +1,6 @@
-var song
-var fft
-var particles = []
+var song;
+var fft;
+var particles = [];
 
 
 function preload() {
