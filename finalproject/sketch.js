@@ -32,13 +32,13 @@ function draw() {
 
     for (var t = -1; t <= 1; t += 2) {
         beginShape()
-        for (var i = 0; i < 180; i += 0.5) {
-            var index = floor(map(i, 0, 180, 0, wave.length - 1))
+        for (var j = 0; j < 180; j += 0.5) {
+            var index = floor(map(j, 0, 180, 0, wave.length - 1))
 
             var r = map(wave[index], -1, 1, 150, 350)
 
-            var x = r * sin(i) * t
-            var y = r * cos(i)
+            var x = r * sin(j) * t
+            var y = r * cos(j)
             vertex(x, y)
         }
         endShape()
