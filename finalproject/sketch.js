@@ -20,9 +20,13 @@ function setup() {
 function draw() {
     background (0)
     stroke(255) //wave color
+    strokeWeight(3)
     noFill()
 
     translate(width / 2, height / 2)
+
+    fft.analyze()
+    amp = fft.getEnergy(20, 200) //make particles respond to a frequency range
 
     var wave = fft.waveform()
 
@@ -42,9 +46,13 @@ function draw() {
     var p = new Particle()
     particles.push(p)
 
-    for (var i = 0; i < particles.length; i++) {
-        particles[i].update()
+    for (var i = particles.length - 1; i >= 0; i--) {
+        if (!particles[i].edges()) {
+        particles[i].update(amp > 230) //frequency
         particles[i].show()
+        } else {
+            particles.splice(i, 1)
+        }
     }
 
 }
@@ -68,14 +76,28 @@ class Particle {
         this.acc = this.pos.copy().mult(random(0.0001, 0.00001)) //to make them accelerate
 
         this.w = random(3, 5)
+
+        this.color = [random(200, 255), random(200, 255), random(200, 255)] //random colors
     }
-    update() {
+    update(cond) {
         this.vel.add(this.acc)
         this.pos.add(this.vel)
+        if (cond) {
+            this.pos.add(this.vel)
+            this.pos.add(this.vel)
+            this.pos.add(this.vel)
+        }
+    }
+    edges() { //to make particles go away after leaving canvas
+        if (this.pos.x <-width / 2 ||this.pos.x > width / 2 || this.pos.y < -height || this.pos.y > height) {
+                return true
+            } else {
+                return false
+            }
     }
     show() {
         noStroke()
-        fill(255)
+        fill(this.color)
         ellipse(this.pos.x, this.pos.y, this.w)
     }
 }
