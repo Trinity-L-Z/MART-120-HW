@@ -11,10 +11,6 @@ function preload() {
     song = loadSound("machine.mp3");
 }
 
-function soundLoaded() {
-    console.log("Sound loaded!");
-}
-
 function togglePlaying() {
     if (!song.isPlaying()) {
         song.play();
@@ -29,7 +25,6 @@ function setup() {
     createCanvas(400, 400, WEBGL);
     button = createButton("play");
     button.mousePressed(togglePlaying);
-    mySound = loadSound('machine.mp3', soundLoaded);
     fft = new p5.FFT();
 
     for (let i=0; i<num; i++) {
