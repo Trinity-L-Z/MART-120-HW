@@ -14,21 +14,21 @@ function setup() {
     button = createButton("play");
     button.mousePressed(togglePlaying);
 
-    fft = new p5.FFT()
+    fft = new p5.FFT();
 }
 
 function draw() {
-    background (0)
-    stroke(255) //wave color
-    strokeWeight(3)
-    noFill()
+    background (0);
+    stroke(0, 300, 70); //wave color
+    strokeWeight(3);
+    noFill();
 
-    translate(width / 2, height / 2)
+    translate(width / 2, height / 2);
 
-    fft.analyze()
-    amp = fft.getEnergy(20, 200) //make particles respond to a frequency range
+    fft.analyze();
+    amp = fft.getEnergy(20, 200); //make particles respond to a frequency range
 
-    var wave = fft.waveform()
+    var wave = fft.waveform();
 
     for (var t = -1; t <= 1; t += 2) {
         beginShape()
@@ -43,8 +43,8 @@ function draw() {
         }
         endShape()
         }
-    var p = new Particle()
-    particles.push(p)
+    var p = new Particle();
+    particles.push(p);
 
     for (var i = particles.length - 1; i >= 0; i--) {
         if (!particles[i].edges()) {
@@ -71,17 +71,17 @@ function togglePlaying() {
 
 class Particle {
     constructor() {
-        this.pos = p5.Vector.random2D().mult(250)
-        this.vel = createVector(0, 0) //to make particles move
-        this.acc = this.pos.copy().mult(random(0.0001, 0.00001)) //to make them accelerate
+        this.pos = p5.Vector.random2D().mult(150); //positioning of where the particle circle is
+        this.vel = createVector(0, 0); //to make particles move
+        this.acc = this.pos.copy().mult(random(0.0001, 0.00001)); //to make them accelerate
 
-        this.w = random(3, 5)
+        this.w = random(3, 5);
 
-        this.color = [random(200, 255), random(200, 255), random(200, 255)] //random colors
+        this.color = [random(200, 255), random(200, 255), random(200, 255)]; //random colors
     }
     update(cond) {
-        this.vel.add(this.acc)
-        this.pos.add(this.vel)
+        this.vel.add(this.acc);
+        this.pos.add(this.vel);
         if (cond) {
             this.pos.add(this.vel)
             this.pos.add(this.vel)
@@ -96,8 +96,8 @@ class Particle {
             }
     }
     show() {
-        noStroke()
-        fill(this.color)
-        ellipse(this.pos.x, this.pos.y, this.w)
+        noStroke();
+        fill(this.color);
+        ellipse(this.pos.x, this.pos.y, this.w);
     }
 }
