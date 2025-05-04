@@ -7,6 +7,8 @@ function preload() {
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
+    button = createButton("play");
+    button.mousePressed(togglePlaying);
 }
 
 function draw() {
