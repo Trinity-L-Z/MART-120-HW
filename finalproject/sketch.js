@@ -19,7 +19,6 @@ function setup() {
 
 function draw() {
     background (0);
-    stroke(0, 300, 70); //wave color
     strokeWeight(3);
     noFill();
 
@@ -31,17 +30,58 @@ function draw() {
     var wave = fft.waveform();
 
     for (var t = -1; t <= 1; t += 2) {
-        beginShape()
+
+        beginShape(); //green circle
         for (var j = 0; j < 180; j += 0.5) {
             var index = floor(map(j, 0, 180, 0, wave.length - 1))
 
-            var r = map(wave[index], -1, 1, 150, 350)
+            var r = map(wave[index], -1, 1, 150, 350) //this is for altering the size of the circle
 
             var x = r * sin(j) * t
             var y = r * cos(j)
             vertex(x, y)
         }
-        endShape()
+        stroke(0, 300, 70);
+        endShape();
+
+        beginShape(); //pinkish purple circle
+        for (var j = 0; j < 180; j += 0.5) {
+            var index = floor(map(j, 0, 180, 0, wave.length - 1))
+
+            var r = map(wave[index], -1, 1, 200, 350)
+
+            var x = r * sin(j) * t
+            var y = r * cos(j)
+            vertex(x, y)
+        }
+        stroke(152, 55, 158);
+        endShape();
+
+        beginShape(); //purple circle
+        for (var j = 0; j < 180; j += 0.5) {
+            var index = floor(map(j, 0, 180, 0, wave.length - 1))
+
+            var r = map(wave[index], -1, 1, 15, 350)
+
+            var x = r * sin(j) * t
+            var y = r * cos(j)
+            vertex(x, y)
+        }
+        stroke(100, 50, 400);
+        endShape();
+
+        beginShape(); //orange circle
+        for (var j = 0; j < 180; j += 0.5) {
+            var index = floor(map(j, 0, 180, 0, wave.length - 1))
+
+            var r = map(wave[index], -1, 1, 5, 150)
+
+            var x = r * sin(j) * t
+            var y = r * cos(j)
+            vertex(x, y)
+        }
+        stroke( 235, 213, 183);
+        endShape();
         }
     var p = new Particle();
     particles.push(p);
