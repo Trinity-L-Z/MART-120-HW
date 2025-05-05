@@ -9,7 +9,7 @@ function preload() {
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    angleMode(DEGREES)
+    angleMode(DEGREES);
 
     button = createButton("play");
     button.mousePressed(togglePlaying);
