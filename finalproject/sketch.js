@@ -5,6 +5,8 @@ var c = 0;
 var f = [];
 var d = [];
 
+var particles = [];
+
 function preload() {
   song = loadSound("machine.mp3");
 }
@@ -36,6 +38,7 @@ function setup() {
 
 function draw() {
   fft.analyze();
+  amp = fft.getEnergy(20, 200); //to make particles respond to frequency range
   fftLin = fft.linAverages(linNum);
   noStroke();
   fill(0, 0, 0, 20);
@@ -115,6 +118,18 @@ function draw() {
         stroke(255, 204, 0);
         endShape();
   }
+  var p = new Particle();
+    particles.push(p);
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+        if (!particles[i].edges()) {
+        particles[i].update(amp > 230) //frequency
+        particles[i].show()
+        } else {
+            particles.splice(i, 1)
+        }
+    }
+  
 }
 
 function togglePlaying() {
@@ -126,5 +141,38 @@ function togglePlaying() {
         song.pause();
         button.html("play");
         noLoop();
+    }
+}
+
+class Particle {
+    constructor() {
+        this.pos = p5.Vector.random2D().mult(150); //positioning of where the particle circle is
+        this.vel = createVector(0, 0); //to make particles move
+        this.acc = this.pos.copy().mult(random(0.0001, 0.00001)); //to make them accelerate
+
+        this.w = random(3, 5);
+
+        this.color = [random(200, 255), random(200, 255), random(200, 255),]; //random colors
+    }
+    update(cond) {
+        this.vel.add(this.acc);
+        this.pos.add(this.vel);
+        if (cond) {
+            this.pos.add(this.vel)
+            this.pos.add(this.vel)
+            this.pos.add(this.vel)
+        }
+    }
+    edges() { //to make particles go away after leaving canvas
+        if (this.pos.x < -width / 2 ||this.pos.x > width / 2 || this.pos.y < -height || this.pos.y > height) {
+                return true
+            } else {
+                return false
+            }
+    }
+    show() {
+        noStroke();
+        fill(this.color);
+        ellipse(this.pos.x, this.pos.y, this.w);
     }
 }
