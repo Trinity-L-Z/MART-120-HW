@@ -42,6 +42,24 @@ function draw() {
   rect(0, 0, width, height);
   translate(width/2, height/2);
   
+  push();
+  rotate(radians(c));
+  for(var i = 0; i < fftLin.length; i++){
+    strokeWeight(3);
+    if(i % 2 == 1) {
+      stroke(255); //white circles
+    } else {
+      stroke(255, 0, 100); //circle outside color
+    }
+    if(i == 0) { //big center circle
+      ellipse(f[i], d[i], fftLin[i]*spectrumScale*2, fftLin[i]*spectrumScale*2);
+    } else {
+      ellipse(f[i], d[i], fftLin[i]*spectrumScale, fftLin[i]*spectrumScale);
+    }
+  }
+  c += 5;
+  pop();
+  
   var wave = fft.waveform();
   
   for (var t = -1; t <= 1; t +=2) {
@@ -97,23 +115,6 @@ function draw() {
         stroke(255, 204, 0);
         endShape();
   }
-  
-  rotate(radians(c));
-  for(var i = 0; i < fftLin.length; i++){
-    strokeWeight(3);
-    if(i % 2 == 1) {
-      stroke(255); //white circles
-    } else {
-      stroke(255, 0, 100); //circle outside color
-    }
-    if(i == 0) {
-      ellipse(f[i], d[i], fftLin[i]*spectrumScale*2, fftLin[i]*spectrumScale*2);
-    } else {
-      noFill();
-      ellipse(f[i], d[i], fftLin[i]*spectrumScale, fftLin[i]*spectrumScale);
-    }
-  }
-  c += 0.3;
 }
 
 function togglePlaying() {
